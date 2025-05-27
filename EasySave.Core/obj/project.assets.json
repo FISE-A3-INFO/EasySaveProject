@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\EasySave.Core.csproj",
+      "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj",
       "projectName": "EasySave.Core",
-      "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\EasySave.Core.csproj",
+      "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj",
       "packagesPath": "C:\\Users\\selim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\obj\\",
+      "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\selim\\AppData\\Roaming\\NuGet\\NuGet.Config"

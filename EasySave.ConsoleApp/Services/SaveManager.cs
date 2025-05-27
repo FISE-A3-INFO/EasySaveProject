@@ -4,6 +4,7 @@ using EasySave.Core.Models;
 using EasySave.Core.Enums;
 using EasySave.Core.Services;
 using EasySave.ConsoleApp.Services.Backup;
+using EasySave.Logger;
 
 namespace EasySave.ConsoleApp.Services
 {
@@ -27,6 +28,18 @@ namespace EasySave.ConsoleApp.Services
                 return false;
             }
             _works.Add(work);
+
+            // ===== LOG : ajout d'un travail =====
+            LoggerService.Instance.Log(new LogEntry
+            {
+                Name = work.Name,
+                FileSource = work.SourcePath,
+                FileTarget = work.TargetPath,
+                FileSize = 0,
+                FileTransferTime = 0,
+                Time = DateTime.Now
+            });
+
             return true;
         }
 
@@ -60,8 +73,38 @@ namespace EasySave.ConsoleApp.Services
                 SaveType.Differential => new DifferentialBackupService(),
                 _ => throw new NotImplementedException()
             };
-            svc.Execute(work);
-            Console.WriteLine($"✔ {work.Name} terminé.");
+
+            try
+            {
+                svc.Execute(work);
+                Console.WriteLine($"✔ {work.Name} terminé.");
+
+                // ===== LOG : exécution réussite =====
+                LoggerService.Instance.Log(new LogEntry
+                {
+                    Name = work.Name,
+                    FileSource = work.SourcePath,
+                    FileTarget = work.TargetPath,
+                    FileSize = 0, // à remplir si possible
+                    FileTransferTime = 0, // à remplir si possible
+                    Time = DateTime.Now
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erreur sur {work.Name}: {ex.Message}");
+
+                // ===== LOG : exécution échouée =====
+                LoggerService.Instance.Log(new LogEntry
+                {
+                    Name = work.Name,
+                    FileSource = work.SourcePath,
+                    FileTarget = work.TargetPath,
+                    FileSize = 0,
+                    FileTransferTime = 0,
+                    Time = DateTime.Now
+                });
+            }
         }
 
         public void ExecuteMultiple(params int[] indexes)

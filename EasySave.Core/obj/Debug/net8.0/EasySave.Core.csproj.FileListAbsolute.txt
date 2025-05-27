@@ -42,3 +42,15 @@ C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\Vesion1.0\EasySav
 C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\Vesion1.0\EasySaveProject-main\EasySave.Core\obj\Debug\net8.0\refint\EasySave.Core.dll
 C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\Vesion1.0\EasySaveProject-main\EasySave.Core\obj\Debug\net8.0\EasySave.Core.pdb
 C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\Vesion1.0\EasySaveProject-main\EasySave.Core\obj\Debug\net8.0\ref\EasySave.Core.dll
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\bin\Debug\net8.0\EasySave.Core.deps.json
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\bin\Debug\net8.0\EasySave.Core.dll
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\bin\Debug\net8.0\EasySave.Core.pdb
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\EasySave.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\EasySave.Core.AssemblyInfoInputs.cache
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\EasySave.Core.AssemblyInfo.cs
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\EasySave.Core.csproj.CoreCompileInputs.cache
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\EasySave.Core.sourcelink.json
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\EasySave.Core.dll
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\refint\EasySave.Core.dll
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\EasySave.Core.pdb
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2\EasySaveProject\EasySave.Core\obj\Debug\net8.0\ref\EasySave.Core.dll

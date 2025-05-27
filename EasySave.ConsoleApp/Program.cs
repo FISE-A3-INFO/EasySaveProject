@@ -2,6 +2,7 @@ using System;
 using EasySave.ConsoleApp.Services;
 using EasySave.Core.Models;
 using EasySave.Core.Services;
+using EasySave.Core.Enums;
 
 
 namespace EasySave.ConsoleApp
@@ -100,22 +101,29 @@ namespace EasySave.ConsoleApp
 
         static void AddSaveWork()
         {
-            // Ici tu gardes ta logique existante, à améliorer selon besoin
+            
             Console.Write(ResourceService.Get("JobName") + " ");
             var name = Console.ReadLine();
             Console.Write(ResourceService.Get("SourcePath") + " ");
             var src = Console.ReadLine();
             Console.Write(ResourceService.Get("TargetPath") + " ");
             var tgt = Console.ReadLine();
+
+            // Ajout du choix du type de sauvegarde !
+            Console.Write("Type de sauvegarde ? (1: Complète, 2: Différentielle) [1]: ");
+            var typeStr = Console.ReadLine();
+            SaveType type = (typeStr == "2") ? SaveType.Differential : SaveType.Full;
+
             var work = new SaveWork
             {
                 Name = name,
                 SourcePath = src,
-                TargetPath = tgt
-                // ajoute les autres propriétés si besoin
+                TargetPath = tgt,
+                Type = type
             };
             SaveManager.Instance.AddSaveWork(work);
             Console.WriteLine(ResourceService.Get("JobCreated"));
         }
+
     }
 }
