@@ -23,6 +23,13 @@ namespace EasySave.ConsoleApp
                 ResourceService.SetLanguage("en");
             }
             Console.Clear();
+            string logFormat = "json";
+            Console.WriteLine("Format du fichier log ? (1: JSON [défaut], 2: XML) : ");
+            var formatChoice = Console.ReadLine();
+            if (formatChoice == "2")
+                logFormat = "xml";
+            EasySave.Logger.LoggerService.LogFormat = logFormat;
+
 
             // === Mode ligne de commande (args) ===
             if (args.Length > 0)

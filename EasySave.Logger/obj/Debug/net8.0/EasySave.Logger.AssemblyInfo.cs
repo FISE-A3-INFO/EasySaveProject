@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasySave.Logger")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae531518383aaaf0232f3313b398bae4bfcccad7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc223f8bab4bbd4add962b5e0e0be6d24cd9a383")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasySave.Logger")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasySave.Logger")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
