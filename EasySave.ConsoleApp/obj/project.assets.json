@@ -46,43 +46,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\grego\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\selim\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj",
       "projectName": "EasySave.ConsoleApp",
-      "projectPath": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj",
-      "packagesPath": "C:\\Users\\grego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\obj\\",
+      "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\selim\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\grego\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\selim\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\EasySave.Core.csproj": {
-              "projectPath": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\EasySave.Core.csproj"
+            "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\EasySave.Core.csproj": {
+              "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\EasySave.Core.csproj"
             },
-            "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Logger\\EasySave.Logger.csproj": {
-              "projectPath": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Logger\\EasySave.Logger.csproj"
+            "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Logger\\EasySave.Logger.csproj": {
+              "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Logger\\EasySave.Logger.csproj"
             }
           }
         }
@@ -96,8 +88,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -118,7 +109,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\EasySave.Core.csproj": {}
+    "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\EasySave.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\EasySave.Core.csproj": {
+    "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\EasySave.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\EasySave.Core.csproj",
+        "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\EasySave.Core.csproj",
         "projectName": "EasySave.Core",
-        "projectPath": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\EasySave.Core.csproj",
-        "packagesPath": "C:\\Users\\grego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\obj\\",
+        "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\EasySave.Core.csproj",
+        "packagesPath": "C:\\Users\\selim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\Vesion1.0\\EasySaveProject-main\\EasySave.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\grego\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\selim\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
