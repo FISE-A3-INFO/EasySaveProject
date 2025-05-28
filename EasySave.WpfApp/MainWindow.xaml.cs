@@ -2,18 +2,34 @@
 using EasySave.Core.Models;
 using System.Collections.ObjectModel;
 using EasySave.WpfApp.Services;
+using EasySave.Logger; // N'oublie pas ce using !
+using System.Linq;
 
 namespace EasySave.WpfApp
 {
     public partial class MainWindow : Window
     {
         private ObservableCollection<SaveWork> _jobs;
-
+        public ObservableCollection<LogEntry> Logs { get; } = new();
+        
         public MainWindow()
         {
             InitializeComponent();
+
+            
             _jobs = new ObservableCollection<SaveWork>(SaveManager.Instance.SaveWorks);
             JobsDataGrid.ItemsSource = _jobs;
+
+            LogsDataGrid.ItemsSource = Logs;
+
+            
+            foreach (var log in LoggerService.Instance.LoadTodayLogs().Reverse())
+                Logs.Add(log);
+
+            LoggerService.Instance.OnNewLog += log =>
+            {
+                Dispatcher.Invoke(() => Logs.Insert(0, log));
+            };
         }
 
         private void AddJob_Click(object sender, RoutedEventArgs e)
@@ -37,10 +53,7 @@ namespace EasySave.WpfApp
                 {
                     try
                     {
-                        // Lance l’exécution dans un thread à part (pour éviter le freeze)
                         await Task.Run(() => SaveManager.Instance.ExecuteSaveWork(index));
-
-                        // Tu peux rafraîchir la grille ou notifier l’utilisateur ici
                         MessageBox.Show($"Sauvegarde '{selectedJob.Name}' effectuée !", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     catch (Exception ex)
@@ -80,6 +93,7 @@ namespace EasySave.WpfApp
                 MessageBox.Show("Veuillez sélectionner un job à supprimer.", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
         private void ResetJobs_Click(object sender, RoutedEventArgs e)
         {
             var result = MessageBox.Show("Confirmer la réinitialisation de tous les jobs ?", "Confirmation",
@@ -90,7 +104,5 @@ namespace EasySave.WpfApp
                 _jobs.Clear();
             }
         }
-
-
     }
 }
