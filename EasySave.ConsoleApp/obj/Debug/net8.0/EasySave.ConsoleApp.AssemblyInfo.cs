@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasySave.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc223f8bab4bbd4add962b5e0e0be6d24cd9a383")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc36ba7e18818fe56d5edeff62abfb47bfc2f7c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasySave.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasySave.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

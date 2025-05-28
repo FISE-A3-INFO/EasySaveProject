@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj",
+        "projectName": "EasySave.Core",
+        "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj",
+        "packagesPath": "C:\\Users\\selim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\selim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj": {
+                "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj",
+        "projectName": "EasySave.Logger",
+        "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj",
+        "packagesPath": "C:\\Users\\selim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\selim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
+        "projectName": "EasySave.WpfApp",
+        "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
+        "packagesPath": "C:\\Users\\selim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.WpfApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\selim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj": {
+                "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj"
+              },
+              "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj": {
+                "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

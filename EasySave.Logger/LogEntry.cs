@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EasySave.Core.Models
+namespace EasySave.Logger
 {
     public class LogEntry
     {

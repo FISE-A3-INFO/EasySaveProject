@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "EasySave.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EasySave.Logger": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EasySave.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasySave.Core.dll": {}
+        }
+      },
+      "EasySave.Logger/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EasySave.Logger.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EasySave.Logger.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EasySave.Core/1.0.0": {
+      "type": "project",
+      "path": "../EasySave.Core/EasySave.Core.csproj",
+      "msbuildProject": "../EasySave.Core/EasySave.Core.csproj"
+    },
+    "EasySave.Logger/1.0.0": {
+      "type": "project",
+      "path": "../EasySave.Logger/EasySave.Logger.csproj",
+      "msbuildProject": "../EasySave.Logger/EasySave.Logger.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "EasySave.Core >= 1.0.0",
+      "EasySave.Logger >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\selim\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
+      "projectName": "EasySave.WpfApp",
+      "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
+      "packagesPath": "C:\\Users\\selim\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.WpfApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\selim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj": {
+              "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj"
+            },
+            "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj": {
+              "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
