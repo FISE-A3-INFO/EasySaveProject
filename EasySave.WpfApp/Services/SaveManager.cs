@@ -112,5 +112,11 @@ namespace EasySave.WpfApp.Services
             foreach (var i in indexes)
                 ExecuteSaveWork(i);
         }
+        public void RemoveSaveWork(int index)
+        {
+            if (index >= 0 && index < _works.Count)
+                _works.RemoveAt(index);
+        }
+
     }
 }

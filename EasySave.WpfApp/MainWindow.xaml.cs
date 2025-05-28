@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using EasySave.Core.Models;
-using EasySave.Core.Services;
 using System.Collections.ObjectModel;
 using EasySave.WpfApp.Services;
 
@@ -19,16 +18,64 @@ namespace EasySave.WpfApp
 
         private void AddJob_Click(object sender, RoutedEventArgs e)
         {
-            // Juste pour la démo : ajoute un job fictif
-            var job = new SaveWork
+            var addJobWindow = new AddJobWindow
             {
-                Name = "NouveauJob",
-                SourcePath = @"C:\Source",
-                TargetPath = @"C:\Target",
-                Type = EasySave.Core.Enums.SaveType.Full
+                Owner = this
             };
-            SaveManager.Instance.AddSaveWork(job);
-            _jobs.Add(job);
+            if (addJobWindow.ShowDialog() == true && addJobWindow.NewJob != null)
+            {
+                SaveManager.Instance.AddSaveWork(addJobWindow.NewJob);
+                _jobs.Add(addJobWindow.NewJob);
+            }
         }
+        private void RunJob_Click(object sender, RoutedEventArgs e)
+        {
+            if (JobsDataGrid.SelectedItem is SaveWork selectedJob)
+            {
+                int index = _jobs.IndexOf(selectedJob);
+                if (index >= 0)
+                {
+                    try
+                    {
+                        SaveManager.Instance.ExecuteSaveWork(index);
+                        MessageBox.Show($"Sauvegarde '{selectedJob.Name}' effectuée !", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Erreur lors de l'exécution : {ex.Message}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une sauvegarde dans la liste.", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+        private void DeleteJob_Click(object sender, RoutedEventArgs e)
+        {
+            if (JobsDataGrid.SelectedItem is SaveWork selectedJob)
+            {
+                var result = MessageBox.Show(
+                    $"Confirmer la suppression de '{selectedJob.Name}' ?",
+                    "Confirmation",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question
+                );
+                if (result == MessageBoxResult.Yes)
+                {
+                    int index = _jobs.IndexOf(selectedJob);
+                    if (index >= 0)
+                    {
+                        _jobs.RemoveAt(index);
+                        SaveManager.Instance.RemoveSaveWork(index);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner un job à supprimer.", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
     }
 }
