@@ -14,8 +14,17 @@
             <Button Content="Ajouter un job" Width="150" Height="30" Click="AddJob_Click" Margin="0,0,10,0"/>
             <Button Content="Supprimer le job sélectionné" Width="200" Height="30" Click="DeleteJob_Click"/>
         </StackPanel>
-        
-        <DataGrid Grid.Row="1" x:Name="JobsDataGrid" AutoGenerateColumns="True" IsReadOnly="True" SelectionMode="Single"/>
+
+        <DataGrid Grid.Row="1" x:Name="JobsDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Source" Binding="{Binding SourcePath}" />
+                <DataGridTextColumn Header="Cible" Binding="{Binding TargetPath}" />
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}" />
+                <DataGridTextColumn Header="Statut" Binding="{Binding Status}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
 
         <Button Grid.Row="2" Content="Lancer la sauvegarde sélectionnée" Width="250" Height="30" Margin="0,10,0,0"
                 Click="RunJob_Click" HorizontalAlignment="Center"/>

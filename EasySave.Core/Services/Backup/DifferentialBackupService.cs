@@ -19,7 +19,7 @@ namespace EasySave.Core.Services.Backup
                 return;
             }
 
-            work.Status = SaveState.Active;
+            work.Status = EasySave.Core.Enums.SaveState.Active;
 
             var allFiles = Directory.GetFiles(work.SourcePath, "*", SearchOption.AllDirectories);
             var toCopy = new List<string>();
@@ -57,6 +57,7 @@ namespace EasySave.Core.Services.Backup
                 var dst = Path.Combine(work.TargetPath, rel);
                 Directory.CreateDirectory(Path.GetDirectoryName(dst)!);
 
+                
                 var sw = Stopwatch.StartNew();
                 try { File.Copy(src, dst, true); sw.Stop(); }
                 catch
@@ -93,7 +94,7 @@ namespace EasySave.Core.Services.Backup
                 StateService.Instance.WriteState(new List<SaveStateEntry> { state });
             }
 
-            work.Status = SaveState.Completed;
+            work.Status = EasySave.Core.Enums.SaveState.Completed;
         }
     }
 }

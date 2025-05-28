@@ -80,9 +80,11 @@ namespace EasySave.WpfApp.Services
                 _ => throw new NotImplementedException()
             };
 
+            work.Status = EasySave.Core.Enums.SaveState.Active;
             try
             {
                 svc.Execute(work);
+                work.Status = EasySave.Core.Enums.SaveState.Completed;
                 Console.WriteLine($"✔ {work.Name} terminé.");
 
                 // ===== LOG : exécution réussite =====
@@ -99,6 +101,7 @@ namespace EasySave.WpfApp.Services
             catch (Exception ex)
             {
                 Console.WriteLine($"Erreur sur {work.Name}: {ex.Message}");
+                work.Status = EasySave.Core.Enums.SaveState.Error;
 
                 // ===== LOG : exécution échouée =====
                 LoggerService.Instance.Log(new LogEntry

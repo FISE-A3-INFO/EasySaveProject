@@ -28,7 +28,7 @@ namespace EasySave.WpfApp
                 _jobs.Add(addJobWindow.NewJob);
             }
         }
-        private void RunJob_Click(object sender, RoutedEventArgs e)
+        private async void RunJob_Click(object sender, RoutedEventArgs e)
         {
             if (JobsDataGrid.SelectedItem is SaveWork selectedJob)
             {
@@ -37,7 +37,10 @@ namespace EasySave.WpfApp
                 {
                     try
                     {
-                        SaveManager.Instance.ExecuteSaveWork(index);
+                        // Lance l’exécution dans un thread à part (pour éviter le freeze)
+                        await Task.Run(() => SaveManager.Instance.ExecuteSaveWork(index));
+
+                        // Tu peux rafraîchir la grille ou notifier l’utilisateur ici
                         MessageBox.Show($"Sauvegarde '{selectedJob.Name}' effectuée !", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     catch (Exception ex)
@@ -51,6 +54,7 @@ namespace EasySave.WpfApp
                 MessageBox.Show("Veuillez sélectionner une sauvegarde dans la liste.", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
         private void DeleteJob_Click(object sender, RoutedEventArgs e)
         {
             if (JobsDataGrid.SelectedItem is SaveWork selectedJob)

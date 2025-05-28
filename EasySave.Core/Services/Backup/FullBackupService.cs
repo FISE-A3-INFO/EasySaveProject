@@ -18,7 +18,7 @@ namespace EasySave.Core.Services.Backup
                 return;
             }
 
-            work.Status = SaveState.Active;
+            work.Status = EasySave.Core.Enums.SaveState.Active;
 
             var files = Directory.GetFiles(work.SourcePath, "*", SearchOption.AllDirectories);
             int total = files.Length;
@@ -78,7 +78,7 @@ namespace EasySave.Core.Services.Backup
                 StateService.Instance.WriteState(new List<SaveStateEntry> { state });
             }
 
-            work.Status = SaveState.Completed;
+            work.Status = EasySave.Core.Enums.SaveState.Completed;
         }
     }
 }
