@@ -16,6 +16,9 @@
         }
       },
       "EasySave.Core/1.0.0": {
+        "dependencies": {
+          "EasySave.Logger": "1.0.0"
+        },
         "runtime": {
           "EasySave.Core.dll": {
             "assemblyVersion": "1.0.0",
@@ -24,9 +27,6 @@
         }
       },
       "EasySave.Logger/1.0.0": {
-        "dependencies": {
-          "EasySave.Core": "1.0.0"
-        },
         "runtime": {
           "EasySave.Logger.dll": {
             "assemblyVersion": "1.0.0",

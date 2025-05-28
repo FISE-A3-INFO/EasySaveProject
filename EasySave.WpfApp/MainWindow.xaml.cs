@@ -76,6 +76,17 @@ namespace EasySave.WpfApp
                 MessageBox.Show("Veuillez sélectionner un job à supprimer.", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+        private void ResetJobs_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Confirmer la réinitialisation de tous les jobs ?", "Confirmation",
+                                        MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                SaveManager.Instance.ResetJobs();
+                _jobs.Clear();
+            }
+        }
+
 
     }
 }

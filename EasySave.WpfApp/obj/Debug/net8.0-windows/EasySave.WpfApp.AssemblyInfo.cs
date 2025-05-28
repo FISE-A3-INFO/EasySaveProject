@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasySave.WpfApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37366be6fb3dd54a527b0e2f247402af440f22b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3910e22b8a53096c9fbafe736621a9abf2792c2b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasySave.WpfApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasySave.WpfApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

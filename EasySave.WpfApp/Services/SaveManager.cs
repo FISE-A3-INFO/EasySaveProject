@@ -5,6 +5,8 @@ using EasySave.Core.Enums;
 using EasySave.Core.Services;
 using EasySave.Core.Services.Backup;
 using EasySave.Logger;
+using System.Text.Json;
+using System.IO;
 
 namespace EasySave.WpfApp.Services
 {
@@ -16,7 +18,10 @@ namespace EasySave.WpfApp.Services
 
         private readonly List<SaveWork> _works = new();
 
-        private SaveManager() { }
+        private SaveManager()
+        {
+            LoadJobsFromDisk();
+        }
 
         public IReadOnlyList<SaveWork> SaveWorks => _works.AsReadOnly();
 
@@ -28,6 +33,7 @@ namespace EasySave.WpfApp.Services
                 return false;
             }
             _works.Add(work);
+            SaveJobsToDisk();
 
             // ===== LOG : ajout d'un travail =====
             LoggerService.Instance.Log(new LogEntry
@@ -117,6 +123,36 @@ namespace EasySave.WpfApp.Services
             if (index >= 0 && index < _works.Count)
                 _works.RemoveAt(index);
         }
+        private readonly string jobsFilePath =
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "EasySaveTasks", "EasySaveJobs.json");
+
+        // Sauvegarde la liste des jobs sur disque
+        public void SaveJobsToDisk()
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(jobsFilePath));
+            File.WriteAllText(jobsFilePath, JsonSerializer.Serialize(_works));
+        }
+
+        // Charge la liste des jobs depuis le disque
+        public void LoadJobsFromDisk()
+        {
+            if (File.Exists(jobsFilePath))
+            {
+                var jobs = JsonSerializer.Deserialize<List<SaveWork>>(File.ReadAllText(jobsFilePath));
+                if (jobs != null)
+                {
+                    _works.Clear();
+                    _works.AddRange(jobs);
+                }
+            }
+        }
+        public void ResetJobs()
+        {
+            _works.Clear();
+            if (File.Exists(jobsFilePath))
+                File.Delete(jobsFilePath);
+        }
+
 
     }
 }
