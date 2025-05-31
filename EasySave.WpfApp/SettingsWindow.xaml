@@ -1,0 +1,37 @@
+<Window x:Class="EasySave.WpfApp.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Parametres" Height="250" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Choix de langue -->
+        <Label Content="Langue" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="LanguageComboBox" Grid.Row="0" Grid.Column="1" Width="150">
+            <ComboBoxItem Content="Francais" Tag="fr"/>
+            <ComboBoxItem Content="English" Tag="en"/>
+        </ComboBox>
+
+        <!-- Choix du format de log -->
+        <Label Content="Format du log " Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="LogFormatComboBox" Grid.Row="2" Grid.Column="1" Width="150">
+            <ComboBoxItem Content="JSON" Tag="json"/>
+            <ComboBoxItem Content="XML" Tag="xml"/>
+        </ComboBox>
+
+        <!-- Bouton de sauvegarde -->
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Sauvegarder" 
+                HorizontalAlignment="Center" Width="100" Margin="0,20,0,0"
+                Click="SaveSettings_Click"/>
+    </Grid>
+</Window>

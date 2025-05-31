@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using EasySave.WpfApp.Services;
 using EasySave.Logger; // N'oublie pas ce using !
 using System.Linq;
+using EasySave.WpfApp;
 
 namespace EasySave.WpfApp
 {
@@ -104,5 +105,12 @@ namespace EasySave.WpfApp
                 _jobs.Clear();
             }
         }
+
+        private void OpenSettings_Click(object sender, RoutedEventArgs e)
+        {
+            var settingsWindow = new SettingsWindow();
+            settingsWindow.ShowDialog(); // ou .Show() si tu ne veux pas bloquer la MainWindow
+        }
+
     }
 }
