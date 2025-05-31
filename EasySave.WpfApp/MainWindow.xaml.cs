@@ -111,6 +111,8 @@ namespace EasySave.WpfApp
             var settingsWindow = new SettingsWindow();
             settingsWindow.ShowDialog(); // ou .Show() si tu ne veux pas bloquer la MainWindow
         }
+        
+
 
     }
 }

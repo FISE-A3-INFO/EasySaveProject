@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "tâche-Resources",
+      "appliesTo": "EasySave.WpfApp/Properties/Resources.resx",
+      "type": "launch"
+    }
+  ]
+}

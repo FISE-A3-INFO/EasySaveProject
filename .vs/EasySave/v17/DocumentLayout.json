@@ -1,0 +1,262 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C13BB65E-6CF6-400A-951A-E97C77266292}|EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.consoleapp\\easysave.consoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C13BB65E-6CF6-400A-951A-E97C77266292}|EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj|solutionrelative:easysave.consoleapp\\easysave.consoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\models\\savestateentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\models\\savestateentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\models\\logentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\models\\logentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\easysave.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\easysave.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C13BB65E-6CF6-400A-951A-E97C77266292}|EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C13BB65E-6CF6-400A-951A-E97C77266292}|EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj|solutionrelative:easysave.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\services\\stateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\services\\stateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\services\\ibackupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\services\\ibackupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\services\\commandparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\services\\commandparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\models\\savework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\models\\savework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\enums\\savetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\enums\\savetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.core\\enums\\savestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6AF5813-CB31-40D6-A299-0428E21CFE2E}|EasySave.Core\\EasySave.Core.csproj|solutionrelative:easysave.core\\enums\\savestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C13BB65E-6CF6-400A-951A-E97C77266292}|EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.consoleapp\\services\\backup\\differentialbackupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C13BB65E-6CF6-400A-951A-E97C77266292}|EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj|solutionrelative:easysave.consoleapp\\services\\backup\\differentialbackupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C13BB65E-6CF6-400A-951A-E97C77266292}|EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.consoleapp\\services\\backup\\fullbackupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C13BB65E-6CF6-400A-951A-E97C77266292}|EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj|solutionrelative:easysave.consoleapp\\services\\backup\\fullbackupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{771547F7-220D-4789-90FE-AF975A85074C}|EasySave.Logger\\EasySave.Logger.csproj|c:\\users\\grego\\downloads\\easysave\\easysave\\easysave.logger\\loggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{771547F7-220D-4789-90FE-AF975A85074C}|EasySave.Logger\\EasySave.Logger.csproj|solutionrelative:easysave.logger\\loggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB32CA8-A3D2-40DF-BF28-6A1B53615B26}|EasySave\\EasySave.csproj|C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\easysave\\easysave.sln||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BFB32CA8-A3D2-40DF-BF28-6A1B53615B26}|EasySave\\EasySave.csproj|solutionrelative:easysave\\easysave.sln||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EasySave.Core.csproj",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\EasySave.Core.csproj",
+              "RelativeDocumentMoniker": "EasySave.Core\\EasySave.Core.csproj",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\EasySave.Core.csproj",
+              "RelativeToolTip": "EasySave.Core\\EasySave.Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-08T13:47:16.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "EasySave.ConsoleApp\\Program.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\Program.cs",
+              "RelativeToolTip": "EasySave.ConsoleApp\\Program.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAwHsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:38:52.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LogEntry.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Models\\LogEntry.cs",
+              "RelativeDocumentMoniker": "EasySave.Core\\Models\\LogEntry.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Models\\LogEntry.cs",
+              "RelativeToolTip": "EasySave.Core\\Models\\LogEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:48:56.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SaveStateEntry.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Models\\SaveStateEntry.cs",
+              "RelativeDocumentMoniker": "EasySave.Core\\Models\\SaveStateEntry.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Models\\SaveStateEntry.cs",
+              "RelativeToolTip": "EasySave.Core\\Models\\SaveStateEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:48:47.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StateService.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Services\\StateService.cs",
+              "RelativeDocumentMoniker": "EasySave.Core\\Services\\StateService.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Services\\StateService.cs",
+              "RelativeToolTip": "EasySave.Core\\Services\\StateService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:58:09.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EasySave.ConsoleApp.csproj",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj",
+              "RelativeDocumentMoniker": "EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj",
+              "RelativeToolTip": "EasySave.ConsoleApp\\EasySave.ConsoleApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-08T13:43:12.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBackupService.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Services\\IBackupService.cs",
+              "RelativeDocumentMoniker": "EasySave.Core\\Services\\IBackupService.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Services\\IBackupService.cs",
+              "RelativeToolTip": "EasySave.Core\\Services\\IBackupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:05:00.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CommandParser.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Services\\CommandParser.cs",
+              "RelativeDocumentMoniker": "EasySave.Core\\Services\\CommandParser.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Services\\CommandParser.cs",
+              "RelativeToolTip": "EasySave.Core\\Services\\CommandParser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:01:09.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SaveWork.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Models\\SaveWork.cs",
+              "RelativeDocumentMoniker": "EasySave.Core\\Models\\SaveWork.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Models\\SaveWork.cs",
+              "RelativeToolTip": "EasySave.Core\\Models\\SaveWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:48:32.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SaveType.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Enums\\SaveType.cs",
+              "RelativeDocumentMoniker": "EasySave.Core\\Enums\\SaveType.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Enums\\SaveType.cs",
+              "RelativeToolTip": "EasySave.Core\\Enums\\SaveType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:49:32.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SaveState.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Enums\\SaveState.cs",
+              "RelativeDocumentMoniker": "EasySave.Core\\Enums\\SaveState.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Core\\Enums\\SaveState.cs",
+              "RelativeToolTip": "EasySave.Core\\Enums\\SaveState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:49:44.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DifferentialBackupService.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\Services\\Backup\\DifferentialBackupService.cs",
+              "RelativeDocumentMoniker": "EasySave.ConsoleApp\\Services\\Backup\\DifferentialBackupService.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\Services\\Backup\\DifferentialBackupService.cs",
+              "RelativeToolTip": "EasySave.ConsoleApp\\Services\\Backup\\DifferentialBackupService.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:30:40.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FullBackupService.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\Services\\Backup\\FullBackupService.cs",
+              "RelativeDocumentMoniker": "EasySave.ConsoleApp\\Services\\Backup\\FullBackupService.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.ConsoleApp\\Services\\Backup\\FullBackupService.cs",
+              "RelativeToolTip": "EasySave.ConsoleApp\\Services\\Backup\\FullBackupService.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T16:19:43.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoggerService.cs",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Logger\\LoggerService.cs",
+              "RelativeDocumentMoniker": "EasySave.Logger\\LoggerService.cs",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave.Logger\\LoggerService.cs",
+              "RelativeToolTip": "EasySave.Logger\\LoggerService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:50:18.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EasySave.sln",
+              "DocumentMoniker": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave\\EasySave.sln",
+              "RelativeDocumentMoniker": "EasySave\\EasySave.sln",
+              "ToolTip": "C:\\Users\\grego\\Downloads\\EasySave\\EasySave\\EasySave\\EasySave.sln",
+              "RelativeToolTip": "EasySave\\EasySave.sln",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002855|",
+              "WhenOpened": "2025-05-08T13:46:30.551Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

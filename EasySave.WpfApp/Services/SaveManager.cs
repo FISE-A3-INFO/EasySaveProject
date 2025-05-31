@@ -132,7 +132,11 @@ namespace EasySave.WpfApp.Services
         // Sauvegarde la liste des jobs sur disque
         public void SaveJobsToDisk()
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(jobsFilePath));
+            var dir = Path.GetDirectoryName(jobsFilePath);
+            if (!string.IsNullOrEmpty(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
             File.WriteAllText(jobsFilePath, JsonSerializer.Serialize(_works));
         }
 

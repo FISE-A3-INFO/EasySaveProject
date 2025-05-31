@@ -1,9 +1,10 @@
 ﻿<Application x:Class="EasySave.WpfApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:EasySave.WpfApp"
+             xmlns:services="clr-namespace:EasySave.WpfApp.Services"
              StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+	<Application.Resources>
+		<services:ResourceService x:Key="Res" />
+	</Application.Resources>
 </Application>
+
