@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasySave.WpfApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b06293e54944ab1e0846ece6bea1d6b503783e2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+883d664291e8f030a5de86e905095101ed571a3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasySave.WpfApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasySave.WpfApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

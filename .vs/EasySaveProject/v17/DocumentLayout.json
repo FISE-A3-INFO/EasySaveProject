@@ -7,16 +7,32 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.WpfApp\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.WpfApp\\EasySave.WpfApp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\SettingsWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.WpfApp\\SettingsWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.Logger\\EasySave.Logger.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\LogEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.Logger\\LogEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\LoggerService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.Logger\\LoggerService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.WpfApp\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.WpfApp\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EasySave.WpfApp\\EasySave.WpfApp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\bin\\Debug\\net8.0-windows\\EasySave.WpfApp.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}",
@@ -34,15 +50,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SettingsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\SettingsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EasySave.WpfApp\\SettingsWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\SettingsWindow.xaml.cs",
+              "RelativeToolTip": "EasySave.WpfApp\\SettingsWindow.xaml.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAYwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T22:11:44.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "EasySave.Logger.csproj",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj",
+              "RelativeDocumentMoniker": "EasySave.Logger\\EasySave.Logger.csproj",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj",
+              "RelativeToolTip": "EasySave.Logger\\EasySave.Logger.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-31T22:10:36.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LogEntry.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\LogEntry.cs",
+              "RelativeDocumentMoniker": "EasySave.Logger\\LogEntry.cs",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\LogEntry.cs",
+              "RelativeToolTip": "EasySave.Logger\\LogEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T22:10:24.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoggerService.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\LoggerService.cs",
+              "RelativeDocumentMoniker": "EasySave.Logger\\LoggerService.cs",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\LoggerService.cs",
+              "RelativeToolTip": "EasySave.Logger\\LoggerService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAQwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T22:10:14.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "EasySave.WpfApp\\AssemblyInfo.cs",
@@ -50,12 +114,11 @@
               "RelativeToolTip": "EasySave.WpfApp\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T21:40:29.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T21:40:29.071Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "EasySave.WpfApp\\MainWindow.xaml",
@@ -63,8 +126,7 @@
               "RelativeToolTip": "EasySave.WpfApp\\MainWindow.xaml",
               "ViewState": "AgIAABkAAAAAAAAAAAAIwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-31T21:34:25.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T21:34:25.013Z"
             },
             {
               "$type": "Document",
@@ -74,14 +136,14 @@
               "RelativeDocumentMoniker": "EasySave.WpfApp\\App.xaml.cs",
               "ToolTip": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\App.xaml.cs",
               "RelativeToolTip": "EasySave.WpfApp\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T21:32:46.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "EasySave.WpfApp.csproj",
               "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
               "RelativeDocumentMoniker": "EasySave.WpfApp\\EasySave.WpfApp.csproj",
@@ -94,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "EasySave.WpfApp.dll",
               "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\bin\\Debug\\net8.0-windows\\EasySave.WpfApp.dll",
               "RelativeDocumentMoniker": "EasySave.WpfApp\\bin\\Debug\\net8.0-windows\\EasySave.WpfApp.dll",
@@ -105,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "EasySave.WpfApp.runtimeconfig.json",
               "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\bin\\Debug\\net8.0-windows\\EasySave.WpfApp.runtimeconfig.json",
               "RelativeDocumentMoniker": "EasySave.WpfApp\\bin\\Debug\\net8.0-windows\\EasySave.WpfApp.runtimeconfig.json",
@@ -113,8 +175,7 @@
               "RelativeToolTip": "EasySave.WpfApp\\bin\\Debug\\net8.0-windows\\EasySave.WpfApp.runtimeconfig.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-31T21:26:55.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T21:26:55.35Z"
             }
           ]
         }

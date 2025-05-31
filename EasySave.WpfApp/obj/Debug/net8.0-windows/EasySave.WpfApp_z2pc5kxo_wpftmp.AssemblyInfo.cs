@@ -10,13 +10,15 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("EasySave.Core")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("EasySave.WpfApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+883d664291e8f030a5de86e905095101ed571a3b")]
-[assembly: System.Reflection.AssemblyProductAttribute("EasySave.Core")]
-[assembly: System.Reflection.AssemblyTitleAttribute("EasySave.Core")]
+[assembly: System.Reflection.AssemblyProductAttribute("EasySave.WpfApp")]
+[assembly: System.Reflection.AssemblyTitleAttribute("EasySave.WpfApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.
 
