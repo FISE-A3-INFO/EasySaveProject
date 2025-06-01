@@ -1,0 +1,10 @@
+{
+    "watch_directory": "C:\\Users\\mateo\\Desktop\\EasySaveTasks\\log",
+    "allowed_extensions": [
+        ".json",
+        ".xml",
+        ".*"
+    ],
+    "public_key_path": "public_key.pem",
+    "private_key_path": "private_key.pem"
+}

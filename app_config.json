@@ -1,0 +1,7 @@
+{
+  "Language": "fr",
+  "LogFormat": "xml",
+  "BusinessSoftware": "",
+  "PrioritaryExtensions": [],
+  "MaxParallelLargeFileSizeKo": 50000
+}
