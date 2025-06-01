@@ -1,21 +1,24 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
+using EasySave.Core.Services;
 using EasySave.WpfApp.Services;
-using EasySave.Core.Services; // AJOUT pour PauseService
 
 namespace EasySave.WpfApp
 {
     public partial class SettingsWindow : Window
     {
-        // Référence rapide à la ressource "Res" dans App.xaml
+        // Référence à la ressource "Res"
         private ResourceService _res => (ResourceService)Application.Current.Resources["Res"];
 
         public SettingsWindow()
         {
             InitializeComponent();
 
+            // --- INIT ---
             string currentLang = LoadSavedLanguage() ?? "fr";
             SetComboBoxLanguage(currentLang);
 
@@ -24,6 +27,38 @@ namespace EasySave.WpfApp
 
             string currentSoft = LoadSavedBusinessSoftware() ?? "";
             BusinessSoftwareTextBox.Text = currentSoft;
+
+            // NEW: Extensions prioritaires
+            var currentExtensions = LoadSavedExtensions() ?? new List<string>();
+            ExtensionsListBox.ItemsSource = new List<string>(currentExtensions);
+        }
+
+        private void AddExtension_Click(object sender, RoutedEventArgs e)
+        {
+            string ext = AddExtensionTextBox.Text.Trim().ToLower();
+            if (!ext.StartsWith(".") && ext != "") ext = "." + ext;
+            if (!string.IsNullOrEmpty(ext))
+            {
+                var list = ExtensionsListBox.Items.Cast<string>().ToList();
+                if (!list.Contains(ext))
+                {
+                    list.Add(ext);
+                    ExtensionsListBox.ItemsSource = null;
+                    ExtensionsListBox.ItemsSource = list;
+                }
+            }
+            AddExtensionTextBox.Text = "";
+        }
+
+        private void RemoveExtension_Click(object sender, RoutedEventArgs e)
+        {
+            if (ExtensionsListBox.SelectedItem is string ext)
+            {
+                var list = ExtensionsListBox.Items.Cast<string>().ToList();
+                list.Remove(ext);
+                ExtensionsListBox.ItemsSource = null;
+                ExtensionsListBox.ItemsSource = list;
+            }
         }
 
         private void SaveSettings_Click(object sender, RoutedEventArgs e)
@@ -36,6 +71,9 @@ namespace EasySave.WpfApp
 
             // Logiciel métier
             string businessSoft = BusinessSoftwareTextBox.Text?.Trim() ?? "";
+
+            // Extensions prioritaires
+            var extensions = ExtensionsListBox.Items.Cast<string>().Select(x => x.Trim().ToLower()).Where(x => !string.IsNullOrEmpty(x)).Distinct().ToList();
 
             if (string.IsNullOrEmpty(selectedLanguage) || string.IsNullOrEmpty(selectedLogFormat))
             {
@@ -52,13 +90,16 @@ namespace EasySave.WpfApp
             {
                 Language = selectedLanguage,
                 LogFormat = selectedLogFormat,
-                BusinessSoftware = businessSoft
+                BusinessSoftware = businessSoft,
+                PrioritaryExtensions = extensions
             };
 
             string configPath = "app_config.json";
-            File.WriteAllText(configPath, JsonSerializer.Serialize(config));
+            File.WriteAllText(configPath, JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true }));
 
-            // **PauseService**
+            // Reload dynamique pour prise en compte immédiate côté Core
+            ConfigService.Reload();
+
             PauseService.SetTargetProcess(businessSoft);
 
             _res.SetLanguage(selectedLanguage);
@@ -152,6 +193,27 @@ namespace EasySave.WpfApp
             }
         }
 
+        private List<string>? LoadSavedExtensions()
+        {
+            if (!File.Exists("app_config.json"))
+                return null;
+
+            try
+            {
+                var json = File.ReadAllText("app_config.json");
+                var doc = JsonDocument.Parse(json);
+                if (doc.RootElement.TryGetProperty("PrioritaryExtensions", out var arr))
+                {
+                    return arr.EnumerateArray().Select(x => x.GetString() ?? "").Where(x => !string.IsNullOrEmpty(x)).ToList();
+                }
+                return null;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         #endregion
 
         // Classe interne pour désérialisation
@@ -160,6 +222,7 @@ namespace EasySave.WpfApp
             public string? Language { get; set; }
             public string? LogFormat { get; set; }
             public string? BusinessSoftware { get; set; }
+            public List<string>? PrioritaryExtensions { get; set; }
         }
     }
 }

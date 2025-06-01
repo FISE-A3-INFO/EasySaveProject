@@ -1,6 +1,10 @@
 {
   "Language": "fr",
-  "LogFormat": "json",
-  "BusinessSoftware": "notepad.exe",
-  "PrioritaryExtensions": [".docx", ".xlsx", ".pdf"]
+  "LogFormat": "xml",
+  "BusinessSoftware": "Calculatrice.exe",
+  "PrioritaryExtensions": [
+    ".docx",
+    ".xlsx",
+    ".pdf"
+  ]
 }

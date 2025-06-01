@@ -7,30 +7,68 @@ namespace EasySave.Core.Services
 {
     public static class ConfigService
     {
-        public static List<string> PrioritaryExtensions { get; private set; }
+        public static List<string> PrioritaryExtensions { get; private set; } = new List<string>();
+        public static string BusinessSoftware { get; private set; } = "";
+
+        private static string configPath = "app_config.json";
 
         static ConfigService()
         {
-            var configPath = "app_config.json";
+            Load();
+        }
+
+        public static void Reload()
+        {
+            Load();
+        }
+
+        private static void Load()
+        {
             if (File.Exists(configPath))
             {
                 var configText = File.ReadAllText(configPath);
                 var configJson = JsonSerializer.Deserialize<Dictionary<string, object>>(configText);
-                if (configJson != null && configJson.ContainsKey("PrioritaryExtensions"))
+                if (configJson != null)
                 {
-                    var arr = ((JsonElement)configJson["PrioritaryExtensions"]).EnumerateArray();
-                    PrioritaryExtensions = arr.Select(x => x.GetString()?.ToLower() ?? "")
-                                             .Where(x => !string.IsNullOrEmpty(x)).ToList();
+                    // PrioritaryExtensions
+                    if (configJson.ContainsKey("PrioritaryExtensions"))
+                    {
+                        var arr = ((JsonElement)configJson["PrioritaryExtensions"]).EnumerateArray();
+                        PrioritaryExtensions = arr.Select(x => x.GetString()?.ToLower() ?? "").Where(x => !string.IsNullOrEmpty(x)).ToList();
+                    }
+                    else
+                    {
+                        PrioritaryExtensions = new List<string>();
+                    }
+
+                    // BusinessSoftware
+                    if (configJson.ContainsKey("BusinessSoftware"))
+                        BusinessSoftware = ((JsonElement)configJson["BusinessSoftware"]).GetString() ?? "";
+                    else
+                        BusinessSoftware = "";
                 }
                 else
                 {
                     PrioritaryExtensions = new List<string>();
+                    BusinessSoftware = "";
                 }
             }
             else
             {
                 PrioritaryExtensions = new List<string>();
+                BusinessSoftware = "";
             }
+        }
+
+        public static void Save(List<string> extensions, string businessSoftware)
+        {
+            var config = new Dictionary<string, object>
+            {
+                ["PrioritaryExtensions"] = extensions,
+                ["BusinessSoftware"] = businessSoftware
+            };
+            File.WriteAllText(configPath, JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true }));
+            Reload();
         }
     }
 }
