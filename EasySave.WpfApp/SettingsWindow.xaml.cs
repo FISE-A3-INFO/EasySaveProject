@@ -11,7 +11,6 @@ namespace EasySave.WpfApp
 {
     public partial class SettingsWindow : Window
     {
-        // Référence à la ressource "Res"
         private ResourceService _res => (ResourceService)Application.Current.Resources["Res"];
 
         public SettingsWindow()
@@ -28,9 +27,11 @@ namespace EasySave.WpfApp
             string currentSoft = LoadSavedBusinessSoftware() ?? "";
             BusinessSoftwareTextBox.Text = currentSoft;
 
-            // NEW: Extensions prioritaires
             var currentExtensions = LoadSavedExtensions() ?? new List<string>();
             ExtensionsListBox.ItemsSource = new List<string>(currentExtensions);
+
+            int currentLargeFileSize = LoadSavedLargeFileSize() ?? 50000;
+            LargeFileSizeTextBox.Text = currentLargeFileSize.ToString();
         }
 
         private void AddExtension_Click(object sender, RoutedEventArgs e)
@@ -69,11 +70,12 @@ namespace EasySave.WpfApp
             var logItem = (ComboBoxItem)LogFormatComboBox.SelectedItem;
             string selectedLogFormat = logItem?.Tag?.ToString() ?? "json";
 
-            // Logiciel métier
             string businessSoft = BusinessSoftwareTextBox.Text?.Trim() ?? "";
 
-            // Extensions prioritaires
             var extensions = ExtensionsListBox.Items.Cast<string>().Select(x => x.Trim().ToLower()).Where(x => !string.IsNullOrEmpty(x)).Distinct().ToList();
+
+            int largeFileSize = 50000;
+            int.TryParse(LargeFileSizeTextBox.Text, out largeFileSize);
 
             if (string.IsNullOrEmpty(selectedLanguage) || string.IsNullOrEmpty(selectedLogFormat))
             {
@@ -91,13 +93,13 @@ namespace EasySave.WpfApp
                 Language = selectedLanguage,
                 LogFormat = selectedLogFormat,
                 BusinessSoftware = businessSoft,
-                PrioritaryExtensions = extensions
+                PrioritaryExtensions = extensions,
+                MaxParallelLargeFileSizeKo = largeFileSize
             };
 
             string configPath = "app_config.json";
             File.WriteAllText(configPath, JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true }));
 
-            // Reload dynamique pour prise en compte immédiate côté Core
             ConfigService.Reload();
 
             PauseService.SetTargetProcess(businessSoft);
@@ -146,7 +148,6 @@ namespace EasySave.WpfApp
         {
             if (!File.Exists("app_config.json"))
                 return null;
-
             try
             {
                 var json = File.ReadAllText("app_config.json");
@@ -163,7 +164,6 @@ namespace EasySave.WpfApp
         {
             if (!File.Exists("app_config.json"))
                 return null;
-
             try
             {
                 var json = File.ReadAllText("app_config.json");
@@ -180,7 +180,6 @@ namespace EasySave.WpfApp
         {
             if (!File.Exists("app_config.json"))
                 return null;
-
             try
             {
                 var json = File.ReadAllText("app_config.json");
@@ -197,7 +196,6 @@ namespace EasySave.WpfApp
         {
             if (!File.Exists("app_config.json"))
                 return null;
-
             try
             {
                 var json = File.ReadAllText("app_config.json");
@@ -214,15 +212,29 @@ namespace EasySave.WpfApp
             }
         }
 
+        private int? LoadSavedLargeFileSize()
+        {
+            if (!File.Exists("app_config.json")) return null;
+            try
+            {
+                var json = File.ReadAllText("app_config.json");
+                var doc = JsonDocument.Parse(json);
+                if (doc.RootElement.TryGetProperty("MaxParallelLargeFileSizeKo", out var v))
+                    return v.GetInt32();
+                return null;
+            }
+            catch { return null; }
+        }
+
         #endregion
 
-        // Classe interne pour désérialisation
         public class ConfigModel
         {
             public string? Language { get; set; }
             public string? LogFormat { get; set; }
             public string? BusinessSoftware { get; set; }
             public List<string>? PrioritaryExtensions { get; set; }
+            public int? MaxParallelLargeFileSizeKo { get; set; }
         }
     }
 }

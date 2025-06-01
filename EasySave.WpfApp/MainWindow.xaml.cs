@@ -10,13 +10,17 @@ using System.Diagnostics;
 using System.Windows.Threading;
 using System.IO;
 using System.Text.Json;
-using EasySave.Core.Services; // Ajoute ce using !
+using EasySave.Core.Services;
+using System.Runtime.InteropServices;
+
 
 
 namespace EasySave.WpfApp
 {
     public partial class MainWindow : Window
     {
+        [System.Runtime.InteropServices.DllImport("kernel32.dll")]
+        private static extern bool AllocConsole();
         private ObservableCollection<SaveWork> _jobs;
         public ObservableCollection<LogEntry> Logs { get; } = new();
 
@@ -26,6 +30,7 @@ namespace EasySave.WpfApp
 
         public MainWindow()
         {
+            AllocConsole();
             InitializeComponent();
 
             _jobs = new ObservableCollection<SaveWork>(SaveManager.Instance.SaveWorks);
@@ -47,7 +52,7 @@ namespace EasySave.WpfApp
             _pauseChecker.Tick += PauseChecker_Tick;
             _pauseChecker.Start();
         }
-
+        
         // Vérifie toutes les 2 secondes si le logiciel métier est lancé
         private void PauseChecker_Tick(object? sender, EventArgs e)
         {

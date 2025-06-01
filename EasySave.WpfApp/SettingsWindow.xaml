@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="{Binding [SettingsWindowTitle], Source={StaticResource Res}}"
-        Height="410" Width="410"
+        Height="470" Width="410"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="20">
         <Grid.RowDefinitions>
@@ -11,11 +11,12 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <!-- Choix de langue -->
@@ -40,15 +41,19 @@
         <Label Content="Extensions prioritaires (une par ligne, ex: .pdf)" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" />
         <StackPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Top">
             <ListBox x:Name="ExtensionsListBox" Height="70" Margin="0,0,0,5"/>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="AddExtensionTextBox" Width="70" Margin="0,0,5,0"/>
                 <Button Content="Ajouter" Click="AddExtension_Click" Width="60"/>
                 <Button Content="Supprimer" Click="RemoveExtension_Click" Width="80" Margin="5,0,0,0"/>
             </StackPanel>
         </StackPanel>
 
+        <!-- Seuil fichier volumineux -->
+        <Label Content="Seuil fichier volumineux (Ko) :" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="LargeFileSizeTextBox" Grid.Row="5" Grid.Column="1" Width="100" />
+
         <!-- Bouton de sauvegarde -->
-        <Button Grid.Row="5" Grid.ColumnSpan="2"
+        <Button Grid.Row="6" Grid.ColumnSpan="2"
                 Content="{Binding [SaveButton], Source={StaticResource Res}}"
                 HorizontalAlignment="Center"
                 Width="100"

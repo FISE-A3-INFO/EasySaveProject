@@ -6,5 +6,6 @@
     ".docx",
     ".xlsx",
     ".pdf"
-  ]
+  ],
+  "MaxParallelLargeFileSizeKo": 1000
 }

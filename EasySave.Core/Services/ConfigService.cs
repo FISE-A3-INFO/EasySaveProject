@@ -9,6 +9,7 @@ namespace EasySave.Core.Services
     {
         public static List<string> PrioritaryExtensions { get; private set; } = new List<string>();
         public static string BusinessSoftware { get; private set; } = "";
+        public static int MaxParallelLargeFileSizeKo { get; private set; } = 50000;
 
         private static string configPath = "app_config.json";
 
@@ -46,29 +47,26 @@ namespace EasySave.Core.Services
                         BusinessSoftware = ((JsonElement)configJson["BusinessSoftware"]).GetString() ?? "";
                     else
                         BusinessSoftware = "";
+
+                    // MaxParallelLargeFileSizeKo
+                    if (configJson.ContainsKey("MaxParallelLargeFileSizeKo"))
+                        MaxParallelLargeFileSizeKo = ((JsonElement)configJson["MaxParallelLargeFileSizeKo"]).GetInt32();
+                    else
+                        MaxParallelLargeFileSizeKo = 50000;
                 }
                 else
                 {
                     PrioritaryExtensions = new List<string>();
                     BusinessSoftware = "";
+                    MaxParallelLargeFileSizeKo = 50000;
                 }
             }
             else
             {
                 PrioritaryExtensions = new List<string>();
                 BusinessSoftware = "";
+                MaxParallelLargeFileSizeKo = 50000;
             }
-        }
-
-        public static void Save(List<string> extensions, string businessSoftware)
-        {
-            var config = new Dictionary<string, object>
-            {
-                ["PrioritaryExtensions"] = extensions,
-                ["BusinessSoftware"] = businessSoftware
-            };
-            File.WriteAllText(configPath, JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true }));
-            Reload();
         }
     }
 }

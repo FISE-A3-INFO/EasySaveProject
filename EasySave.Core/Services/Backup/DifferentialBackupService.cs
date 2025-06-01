@@ -76,7 +76,16 @@ namespace EasySave.Core.Services.Backup
                 Directory.CreateDirectory(Path.GetDirectoryName(dst)!);
 
                 var sw = Stopwatch.StartNew();
-                try { File.Copy(src, dst, true); sw.Stop(); }
+                long sizeBytes = new FileInfo(src).Length;
+
+                // ========== GESTION FICHIER VOLUMINEUX ==========
+                LargeFileTransferCoordinator.EnterIfLargeFile(sizeBytes);
+
+                try
+                {
+                    File.Copy(src, dst, true);
+                    sw.Stop();
+                }
                 catch
                 {
                     sw.Stop();
@@ -85,19 +94,24 @@ namespace EasySave.Core.Services.Backup
                         Name = work.Name,
                         FileSource = src,
                         FileTarget = dst,
-                        FileSize = new FileInfo(src).Length,
+                        FileSize = sizeBytes,
                         FileTransferTime = -1,
                         Time = DateTime.Now
                     });
                     continue;
                 }
+                finally
+                {
+                    LargeFileTransferCoordinator.ExitIfLargeFile(sizeBytes);
+                }
+                // ========== FIN GESTION FICHIER VOLUMINEUX ==========
 
                 LoggerService.Instance.Log(new LogEntry
                 {
                     Name = work.Name,
                     FileSource = src,
                     FileTarget = dst,
-                    FileSize = new FileInfo(src).Length,
+                    FileSize = sizeBytes,
                     FileTransferTime = sw.Elapsed.TotalMilliseconds,
                     Time = DateTime.Now
                 });
