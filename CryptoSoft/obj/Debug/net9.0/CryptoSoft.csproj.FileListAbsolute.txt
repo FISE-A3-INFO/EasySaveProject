@@ -1,0 +1,15 @@
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\bin\Debug\net9.0\CryptoSoft.exe
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\bin\Debug\net9.0\CryptoSoft.deps.json
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\bin\Debug\net9.0\CryptoSoft.runtimeconfig.json
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\bin\Debug\net9.0\CryptoSoft.dll
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\bin\Debug\net9.0\CryptoSoft.pdb
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\CryptoSoft.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\CryptoSoft.AssemblyInfoInputs.cache
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\CryptoSoft.AssemblyInfo.cs
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\CryptoSoft.csproj.CoreCompileInputs.cache
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\CryptoSoft.sourcelink.json
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\CryptoSoft.dll
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\refint\CryptoSoft.dll
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\CryptoSoft.pdb
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\CryptoSoft.genruntimeconfig.cache
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\CryptoSoft\obj\Debug\net9.0\ref\CryptoSoft.dll

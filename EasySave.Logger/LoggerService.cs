@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Diagnostics;
 
 namespace EasySave.Logger
 {
@@ -60,6 +61,8 @@ namespace EasySave.Logger
             {
                 Console.WriteLine($"[ERROR] Logging failed: {ex.Message}");
             }
+            
+
         }
 
         // Récupère les logs du jour (fichier courant)

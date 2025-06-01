@@ -64,3 +64,4 @@ C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2.1\EasySaveProject
 C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2.1\EasySaveProject\EasySave.WpfApp\obj\Debug\net8.0-windows\EasySave.WpfApp.pdb
 C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2.1\EasySaveProject\EasySave.WpfApp\obj\Debug\net8.0-windows\EasySave.WpfApp.genruntimeconfig.cache
 C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2.1\EasySaveProject\EasySave.WpfApp\obj\Debug\net8.0-windows\ref\EasySave.WpfApp.dll
+C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\EasySave.WpfApp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll

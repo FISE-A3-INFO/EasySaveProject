@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "EasySave.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -28,6 +41,33 @@
     }
   },
   "libraries": {
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "EasySave.Core/1.0.0": {
       "type": "project",
       "path": "../EasySave.Core/EasySave.Core.csproj",
@@ -42,39 +82,47 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "EasySave.Core >= 1.0.0",
-      "EasySave.Logger >= 1.0.0"
+      "EasySave.Logger >= 1.0.0",
+      "Newtonsoft.Json >= 13.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\selim\\.nuget\\packages\\": {}
+    "C:\\Users\\mateo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2.1\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
+      "projectUniqueName": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
       "projectName": "EasySave.WpfApp",
-      "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2.1\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
-      "packagesPath": "C:\\Users\\selim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2.1\\EasySaveProject\\EasySave.WpfApp\\obj\\",
+      "projectPath": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\EasySave.WpfApp.csproj",
+      "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.WpfApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\selim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2.1\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj": {
-              "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2.1\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj"
+            "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj": {
+              "projectPath": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Core\\EasySave.Core.csproj"
             },
-            "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2.1\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj": {
-              "projectPath": "C:\\Users\\selim\\Desktop\\work\\genie_logiciel\\Livrables\\Livrable2.1\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj"
+            "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj": {
+              "projectPath": "C:\\Users\\mateo\\OneDrive\\Projet\\PRO\\EasySave_projet_CESI_FISE_A3\\EasySaveProject\\EasySave.Logger\\EasySave.Logger.csproj"
             }
           }
         }
@@ -88,11 +136,18 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -112,7 +167,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
