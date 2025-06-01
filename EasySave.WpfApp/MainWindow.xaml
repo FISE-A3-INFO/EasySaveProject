@@ -5,42 +5,57 @@
         Title="{Binding [MainWindowTitle], Source={StaticResource Res}}"
         Height="600" Width="900">
 
-	<Grid Margin="10">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="*"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="160"/>
-			<RowDefinition Height="Auto"/>
-		</Grid.RowDefinitions>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-		<StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
-			<Button Content="{Binding [AddJobButton], Source={StaticResource Res}}" Width="150" Height="30" Click="AddJob_Click" Margin="0,0,10,0"/>
-			<Button Content="{Binding [DeleteJobButton], Source={StaticResource Res}}" Width="200" Height="30" Click="DeleteJob_Click"/>
-		</StackPanel>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="{Binding [AddJobButton], Source={StaticResource Res}}" Width="150" Height="30" Click="AddJob_Click" Margin="0,0,10,0"/>
+            <Button Content="{Binding [DeleteJobButton], Source={StaticResource Res}}" Width="200" Height="30" Click="DeleteJob_Click"/>
+        </StackPanel>
 
-		<DataGrid Grid.Row="1" x:Name="JobsDataGrid" IsReadOnly="True" SelectionMode="Extended" SelectionUnit="FullRow" AutoGenerateColumns="False">
-			<DataGrid.Columns>
-				<DataGridTextColumn Header="{Binding [JobName], Source={StaticResource Res}}" Binding="{Binding Name}" />
-				<DataGridTextColumn Header="{Binding [SourcePath], Source={StaticResource Res}}" Binding="{Binding SourcePath}" />
-				<DataGridTextColumn Header="{Binding [TargetPath], Source={StaticResource Res}}" Binding="{Binding TargetPath}" />
-				<DataGridTextColumn Header="{Binding [JobType], Source={StaticResource Res}}" Binding="{Binding Type}" />
-				<DataGridTextColumn Header="{Binding [JobStatus], Source={StaticResource Res}}" Binding="{Binding Status}" />
-			</DataGrid.Columns>
-		</DataGrid>
+        <DataGrid Grid.Row="1" x:Name="JobsDataGrid" IsReadOnly="True" SelectionMode="Extended" SelectionUnit="FullRow" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{Binding [JobName], Source={StaticResource Res}}" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="{Binding [SourcePath], Source={StaticResource Res}}" Binding="{Binding SourcePath}" />
+                <DataGridTextColumn Header="{Binding [TargetPath], Source={StaticResource Res}}" Binding="{Binding TargetPath}" />
+                <DataGridTextColumn Header="{Binding [JobType], Source={StaticResource Res}}" Binding="{Binding Type}" />
+                <DataGridTextColumn Header="{Binding [JobStatus], Source={StaticResource Res}}" Binding="{Binding Status}" />
 
-		<Button Grid.Row="2"
+                <!-- ==== NOUVELLE COLONNE : Actions ==== -->
+                <DataGridTemplateColumn Header="Actions">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="Pause" Padding="6,2" Margin="2,0"
+                                        Click="PauseJob_Click"/>
+                                <Button Content="Reprendre" Padding="6,2" Margin="2,0"
+                                        Click="ResumeJob_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!-- ============================== -->
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Grid.Row="2"
                 Content="{Binding [RunJobButton], Source={StaticResource Res}}"
                 Width="250" Height="30" Margin="0,10,0,0"
                 Click="RunJob_Click" HorizontalAlignment="Center"/>
 
-		<Button Grid.Row="3"
+        <Button Grid.Row="3"
                 Content="{Binding [ResetJobsButton], Source={StaticResource Res}}"
                 Width="180" Height="24" Margin="0,5,0,0"
                 Click="ResetJobs_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
-		<Button Content="{Binding [SettingsButton], Source={StaticResource Res}}"
+        <Button Content="{Binding [SettingsButton], Source={StaticResource Res}}"
                 Width="100"
                 Height="30"
                 Click="OpenSettings_Click"
@@ -48,11 +63,11 @@
                 VerticalAlignment="Top"
                 Margin="10"/>
 
-		<DataGrid Grid.Row="4"
+        <DataGrid Grid.Row="4"
                   x:Name="LogsDataGrid"
                   Margin="0,10,0,0"
                   AutoGenerateColumns="True"
                   IsReadOnly="True"
                   ItemsSource="{Binding Logs}" />
-	</Grid>
+    </Grid>
 </Window>

@@ -116,16 +116,21 @@ namespace EasySave.WpfApp.Services
             }
         }
 
+        // Nouvelle version simple et correcte
         public void ExecuteMultiple(params int[] indexes)
         {
-            foreach (var i in indexes)
-                ExecuteSaveWork(i);
+            foreach (var index in indexes)
+            {
+                ExecuteSaveWork(index);
+            }
         }
+
         public void RemoveSaveWork(int index)
         {
             if (index >= 0 && index < _works.Count)
                 _works.RemoveAt(index);
         }
+
         private readonly string jobsFilePath =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "EasySaveTasks", "EasySaveJobs.json");
 
@@ -159,7 +164,5 @@ namespace EasySave.WpfApp.Services
             if (File.Exists(jobsFilePath))
                 File.Delete(jobsFilePath);
         }
-
-
     }
 }

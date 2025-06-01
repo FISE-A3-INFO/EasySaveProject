@@ -5,6 +5,7 @@ using EasySave.WpfApp.Services;
 using EasySave.Logger; // N'oublie pas ce using !
 using System.Linq;
 using EasySave.WpfApp;
+using System.Windows.Controls;
 
 namespace EasySave.WpfApp
 {
@@ -12,18 +13,18 @@ namespace EasySave.WpfApp
     {
         private ObservableCollection<SaveWork> _jobs;
         public ObservableCollection<LogEntry> Logs { get; } = new();
-        
+
         public MainWindow()
         {
             InitializeComponent();
 
-            
+
             _jobs = new ObservableCollection<SaveWork>(SaveManager.Instance.SaveWorks);
             JobsDataGrid.ItemsSource = _jobs;
 
             LogsDataGrid.ItemsSource = Logs;
 
-            
+
             foreach (var log in LoggerService.Instance.LoadTodayLogs().Reverse())
                 Logs.Add(log);
 
@@ -137,6 +138,17 @@ namespace EasySave.WpfApp
             var settingsWindow = new SettingsWindow();
             settingsWindow.ShowDialog(); // ou .Show() si tu ne veux pas bloquer la MainWindow
         }
+        private void PauseJob_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.DataContext is SaveWork job)
+                job.PauseRequested = true;
+        }
+        private void ResumeJob_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.DataContext is SaveWork job)
+                job.PauseRequested = false;
+        }
+
         
 
 
