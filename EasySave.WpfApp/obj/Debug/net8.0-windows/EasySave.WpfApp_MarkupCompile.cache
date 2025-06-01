@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\EasySave.WpfApp\obj\Debug\net8.0-windows\
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2.1\EasySaveProject\EasySave.WpfApp\obj\Debug\net8.0-windows\
 EasySave.WpfApp
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\mateo\OneDrive\Projet\PRO\EasySave_projet_CESI_FISE_A3\EasySaveProject\EasySave.WpfApp\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+C:\Users\selim\Desktop\work\genie_logiciel\Livrables\Livrable2.1\EasySaveProject\EasySave.WpfApp\App.xaml
 3244146911
 
 856485529
-200988858127
+200-956929988
 AddJobWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;
 
 False

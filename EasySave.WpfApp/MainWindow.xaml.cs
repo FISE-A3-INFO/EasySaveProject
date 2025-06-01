@@ -47,27 +47,53 @@ namespace EasySave.WpfApp
         }
         private async void RunJob_Click(object sender, RoutedEventArgs e)
         {
-            if (JobsDataGrid.SelectedItem is SaveWork selectedJob)
+            // Prend TOUS les jobs sélectionnés
+            var selectedJobs = JobsDataGrid.SelectedItems.Cast<SaveWork>().ToList();
+            if (selectedJobs.Count == 0)
             {
-                int index = _jobs.IndexOf(selectedJob);
-                if (index >= 0)
+                MessageBox.Show("Veuillez sélectionner au moins une sauvegarde.", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Si plusieurs jobs sélectionnés, demande le mode d'exécution
+            if (selectedJobs.Count > 1)
+            {
+                var result = MessageBox.Show(
+                    "Lancer toutes les sauvegardes en parallèle ? (Non = séquentiel)",
+                    "Mode d'exécution",
+                    MessageBoxButton.YesNoCancel,
+                    MessageBoxImage.Question
+                );
+
+                if (result == MessageBoxResult.Cancel) return;
+
+                if (result == MessageBoxResult.Yes)
                 {
-                    try
+                    // PARALLÈLE : tous en même temps
+                    var tasks = selectedJobs.Select(job =>
+                        Task.Run(() => SaveManager.Instance.ExecuteSaveWork(_jobs.IndexOf(job)))
+                    );
+                    await Task.WhenAll(tasks);
+                }
+                else
+                {
+                    // SÉQUENTIEL : un après l'autre
+                    foreach (var job in selectedJobs)
                     {
-                        await Task.Run(() => SaveManager.Instance.ExecuteSaveWork(index));
-                        MessageBox.Show($"Sauvegarde '{selectedJob.Name}' effectuée !", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Erreur lors de l'exécution : {ex.Message}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                        await Task.Run(() => SaveManager.Instance.ExecuteSaveWork(_jobs.IndexOf(job)));
                     }
                 }
+                MessageBox.Show($"Sauvegardes terminées !", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("Veuillez sélectionner une sauvegarde dans la liste.", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
+                // Un seul : classique
+                int index = _jobs.IndexOf(selectedJobs[0]);
+                await Task.Run(() => SaveManager.Instance.ExecuteSaveWork(index));
+                MessageBox.Show($"Sauvegarde '{selectedJobs[0].Name}' effectuée !", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+
 
         private void DeleteJob_Click(object sender, RoutedEventArgs e)
         {

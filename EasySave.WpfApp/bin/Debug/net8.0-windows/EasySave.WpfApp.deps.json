@@ -21,7 +21,7 @@
         },
         "runtime": {
           "EasySave.Core.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -29,7 +29,7 @@
       "EasySave.Logger/1.0.0": {
         "runtime": {
           "EasySave.Logger.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

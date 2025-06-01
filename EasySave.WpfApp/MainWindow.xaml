@@ -20,7 +20,7 @@
 			<Button Content="{Binding [DeleteJobButton], Source={StaticResource Res}}" Width="200" Height="30" Click="DeleteJob_Click"/>
 		</StackPanel>
 
-		<DataGrid Grid.Row="1" x:Name="JobsDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False">
+		<DataGrid Grid.Row="1" x:Name="JobsDataGrid" IsReadOnly="True" SelectionMode="Extended" SelectionUnit="FullRow" AutoGenerateColumns="False">
 			<DataGrid.Columns>
 				<DataGridTextColumn Header="{Binding [JobName], Source={StaticResource Res}}" Binding="{Binding Name}" />
 				<DataGridTextColumn Header="{Binding [SourcePath], Source={StaticResource Res}}" Binding="{Binding SourcePath}" />
