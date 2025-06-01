@@ -2,10 +2,16 @@
 using EasySave.Core.Models;
 using System.Collections.ObjectModel;
 using EasySave.WpfApp.Services;
-using EasySave.Logger; // N'oublie pas ce using !
+using EasySave.Logger;
 using System.Linq;
 using EasySave.WpfApp;
 using System.Windows.Controls;
+using System.Diagnostics;
+using System.Windows.Threading;
+using System.IO;
+using System.Text.Json;
+using EasySave.Core.Services; // Ajoute ce using !
+
 
 namespace EasySave.WpfApp
 {
@@ -14,16 +20,18 @@ namespace EasySave.WpfApp
         private ObservableCollection<SaveWork> _jobs;
         public ObservableCollection<LogEntry> Logs { get; } = new();
 
+        // === LOGICIEL MÉTIER : surveillance auto ===
+        private DispatcherTimer _pauseChecker = new DispatcherTimer();
+        private string _softMetier = "";
+
         public MainWindow()
         {
             InitializeComponent();
-
 
             _jobs = new ObservableCollection<SaveWork>(SaveManager.Instance.SaveWorks);
             JobsDataGrid.ItemsSource = _jobs;
 
             LogsDataGrid.ItemsSource = Logs;
-
 
             foreach (var log in LoggerService.Instance.LoadTodayLogs().Reverse())
                 Logs.Add(log);
@@ -32,6 +40,38 @@ namespace EasySave.WpfApp
             {
                 Dispatcher.Invoke(() => Logs.Insert(0, log));
             };
+
+            // === LOGICIEL MÉTIER ===
+            _softMetier = LoadBusinessSoftwareFromConfig() ?? "";
+            _pauseChecker.Interval = TimeSpan.FromSeconds(2);
+            _pauseChecker.Tick += PauseChecker_Tick;
+            _pauseChecker.Start();
+        }
+
+        // Vérifie toutes les 2 secondes si le logiciel métier est lancé
+        private void PauseChecker_Tick(object? sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(_softMetier))
+                return;
+
+            var name = _softMetier.Replace(".exe", "").Trim();
+            var procs = Process.GetProcessesByName(name);
+            PauseService.SetTargetProcess(_softMetier);
+        }
+
+        private string? LoadBusinessSoftwareFromConfig()
+        {
+            try
+            {
+                if (File.Exists("app_config.json"))
+                {
+                    var json = File.ReadAllText("app_config.json");
+                    var config = JsonSerializer.Deserialize<SettingsWindow.ConfigModel>(json);
+                    return config?.BusinessSoftware ?? "";
+                }
+            }
+            catch { }
+            return "";
         }
 
         private void AddJob_Click(object sender, RoutedEventArgs e)
@@ -46,6 +86,7 @@ namespace EasySave.WpfApp
                 _jobs.Add(addJobWindow.NewJob);
             }
         }
+
         private async void RunJob_Click(object sender, RoutedEventArgs e)
         {
             // Prend TOUS les jobs sélectionnés
@@ -95,7 +136,6 @@ namespace EasySave.WpfApp
             }
         }
 
-
         private void DeleteJob_Click(object sender, RoutedEventArgs e)
         {
             if (JobsDataGrid.SelectedItem is SaveWork selectedJob)
@@ -136,8 +176,10 @@ namespace EasySave.WpfApp
         private void OpenSettings_Click(object sender, RoutedEventArgs e)
         {
             var settingsWindow = new SettingsWindow();
-            settingsWindow.ShowDialog(); // ou .Show() si tu ne veux pas bloquer la MainWindow
+            settingsWindow.ShowDialog();
         }
+
+        // Fonctions manuelles pause/reprise (optionnelles si tu as les boutons)
         private void PauseJob_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button btn && btn.DataContext is SaveWork job)
@@ -148,9 +190,5 @@ namespace EasySave.WpfApp
             if (sender is Button btn && btn.DataContext is SaveWork job)
                 job.PauseRequested = false;
         }
-
-        
-
-
     }
 }

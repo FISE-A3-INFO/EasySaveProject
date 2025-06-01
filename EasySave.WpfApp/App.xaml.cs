@@ -1,46 +1,38 @@
 ﻿using System.IO;
 using System.Text.Json;
-using EasySave.Logger; // pour accéder à LoggerService
-using EasySave.WpfApp; // pour accéder à ConfigModel
-using System;
-using System.Windows; // <-- INDISPENSABLE pour Application et StartupEventArgs
+using System.Windows;
+using EasySave.Core.Services;
 
-
-namespace EasySave.WpfApp;
-
-public partial class App : Application
+namespace EasySave.WpfApp
 {
-    protected override void OnStartup(StartupEventArgs e)
+    public partial class App : Application
     {
-        AppDomain.CurrentDomain.UnhandledException += (sender, args) =>
+        protected override void OnStartup(StartupEventArgs e)
         {
-            MessageBox.Show($"Erreur critique : {args.ExceptionObject}");
-        };
+            base.OnStartup(e);
 
-        DispatcherUnhandledException += (sender, args) =>
-        {
-            MessageBox.Show($"Erreur WPF : {args.Exception.Message}");
-            args.Handled = true;
-        };
-
-        // 🔁 Charger le format du log (json/xml) depuis la config
-        if (File.Exists("app_config.json"))
-        {
-            try
+            // Charger le process cible si défini en config
+            string? configPath = "app_config.json";
+            string? targetProcess = null;
+            if (File.Exists(configPath))
             {
-                string json = File.ReadAllText("app_config.json");
-                var config = JsonSerializer.Deserialize<ConfigModel>(json);
-                if (!string.IsNullOrEmpty(config?.LogFormat))
+                try
                 {
-                    LoggerService.LogFormat = config.LogFormat;
+                    var json = File.ReadAllText(configPath);
+                    var config = JsonSerializer.Deserialize<ConfigModel>(json);
+                    targetProcess = config?.BusinessApp;
                 }
+                catch { }
             }
-            catch
-            {
-                // Si erreur, on garde "json" par défaut (ne rien faire)
-            }
+            PauseService.StartMonitoring(targetProcess);
         }
+    }
 
-        base.OnStartup(e);
+    // À mettre ici si pas déjà défini
+    public class ConfigModel
+    {
+        public string? Language { get; set; }
+        public string? LogFormat { get; set; }
+        public string? BusinessApp { get; set; }
     }
 }

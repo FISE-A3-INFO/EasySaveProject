@@ -3,40 +3,45 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:EasySave.WpfApp.Services"
         Title="{Binding [SettingsWindowTitle], Source={StaticResource Res}}"
-        Height="250" Width="400"
+        Height="280" Width="400"
         WindowStartupLocation="CenterScreen">
-	<Grid Margin="20">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="20"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="*"/>
-			<ColumnDefinition Width="*"/>
-		</Grid.ColumnDefinitions>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-		<!-- Choix de langue -->
-		<Label Content="{Binding [LanguageLabel], Source={StaticResource Res}}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
-		<ComboBox x:Name="LanguageComboBox" Grid.Row="0" Grid.Column="1" Width="150">
-			<ComboBoxItem Content="{Binding [LanguageFrench], Source={StaticResource Res}}" Tag="fr"/>
-			<ComboBoxItem Content="{Binding [LanguageEnglish], Source={StaticResource Res}}" Tag="en"/>
-		</ComboBox>
+        <!-- Choix de langue -->
+        <Label Content="{Binding [LanguageLabel], Source={StaticResource Res}}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="LanguageComboBox" Grid.Row="0" Grid.Column="1" Width="150">
+            <ComboBoxItem Content="{Binding [LanguageFrench], Source={StaticResource Res}}" Tag="fr"/>
+            <ComboBoxItem Content="{Binding [LanguageEnglish], Source={StaticResource Res}}" Tag="en"/>
+        </ComboBox>
 
-		<!-- Choix du format de log -->
-		<Label Content="{Binding [LogFormatLabel], Source={StaticResource Res}}" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-		<ComboBox x:Name="LogFormatComboBox" Grid.Row="2" Grid.Column="1" Width="150">
-			<ComboBoxItem Content="JSON" Tag="json"/>
-			<ComboBoxItem Content="XML" Tag="xml"/>
-		</ComboBox>
+        <!-- Choix du format de log -->
+        <Label Content="{Binding [LogFormatLabel], Source={StaticResource Res}}" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="LogFormatComboBox" Grid.Row="2" Grid.Column="1" Width="150">
+            <ComboBoxItem Content="JSON" Tag="json"/>
+            <ComboBoxItem Content="XML" Tag="xml"/>
+        </ComboBox>
 
-		<!-- Bouton de sauvegarde -->
-		<Button Grid.Row="3" Grid.ColumnSpan="2"
+        <!-- Logiciel métier -->
+        <Label Content="Logiciel métier à surveiller (nom du processus, ex: calc)" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="BusinessSoftwareTextBox" Grid.Row="3" Grid.Column="1" Width="150" />
+
+        <!-- Bouton de sauvegarde -->
+        <Button Grid.Row="4" Grid.ColumnSpan="2"
                 Content="{Binding [SaveButton], Source={StaticResource Res}}"
                 HorizontalAlignment="Center"
                 Width="100"
                 Margin="0,20,0,0"
                 Click="SaveSettings_Click"/>
-	</Grid>
+    </Grid>
 </Window>

@@ -164,5 +164,6 @@ namespace EasySave.WpfApp.Services
             if (File.Exists(jobsFilePath))
                 File.Delete(jobsFilePath);
         }
+        public static volatile bool GlobalPauseRequested = false;
     }
 }

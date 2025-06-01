@@ -2,7 +2,8 @@
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
-using EasySave.WpfApp.Services; // <-- on importe ResourceService
+using EasySave.WpfApp.Services;
+using EasySave.Core.Services; // AJOUT pour PauseService
 
 namespace EasySave.WpfApp
 {
@@ -15,27 +16,27 @@ namespace EasySave.WpfApp
         {
             InitializeComponent();
 
-            // Initialise les ComboBox avec la langue actuellement sélectionnée
-            // par défaut "fr", ou ce qui est enregistré dans ton fichier de config.
             string currentLang = LoadSavedLanguage() ?? "fr";
             SetComboBoxLanguage(currentLang);
 
-            // Initialise le format de log (par défaut "json" ou depuis config)
             string currentLogFormat = LoadSavedLogFormat() ?? "json";
             SetComboBoxLogFormat(currentLogFormat);
+
+            string currentSoft = LoadSavedBusinessSoftware() ?? "";
+            BusinessSoftwareTextBox.Text = currentSoft;
         }
 
         private void SaveSettings_Click(object sender, RoutedEventArgs e)
         {
-            // Récupère la langue choisie
             var langItem = (ComboBoxItem)LanguageComboBox.SelectedItem;
             string selectedLanguage = langItem?.Tag?.ToString() ?? "fr";
 
-            // Récupère le format de log choisi
             var logItem = (ComboBoxItem)LogFormatComboBox.SelectedItem;
             string selectedLogFormat = logItem?.Tag?.ToString() ?? "json";
 
-            // Si aucun choix valide
+            // Logiciel métier
+            string businessSoft = BusinessSoftwareTextBox.Text?.Trim() ?? "";
+
             if (string.IsNullOrEmpty(selectedLanguage) || string.IsNullOrEmpty(selectedLogFormat))
             {
                 MessageBox.Show(
@@ -47,17 +48,19 @@ namespace EasySave.WpfApp
                 return;
             }
 
-            // Sauvegarde en JSON (ou XML si tu préfères)
             var config = new
             {
                 Language = selectedLanguage,
-                LogFormat = selectedLogFormat
+                LogFormat = selectedLogFormat,
+                BusinessSoftware = businessSoft
             };
 
             string configPath = "app_config.json";
             File.WriteAllText(configPath, JsonSerializer.Serialize(config));
 
-            // Applique immédiatement la nouvelle langue
+            // **PauseService**
+            PauseService.SetTargetProcess(businessSoft);
+
             _res.SetLanguage(selectedLanguage);
 
             MessageBox.Show(
@@ -82,7 +85,6 @@ namespace EasySave.WpfApp
                     return;
                 }
             }
-            // si non trouvé, on laisse sur premier
             LanguageComboBox.SelectedIndex = 0;
         }
 
@@ -96,7 +98,6 @@ namespace EasySave.WpfApp
                     return;
                 }
             }
-            // si non trouvé, on laisse sur premier
             LogFormatComboBox.SelectedIndex = 0;
         }
 
@@ -134,13 +135,31 @@ namespace EasySave.WpfApp
             }
         }
 
-        #endregion
-    }
+        private string? LoadSavedBusinessSoftware()
+        {
+            if (!File.Exists("app_config.json"))
+                return null;
 
-    // Classe interne pour désérialisation
-    public class ConfigModel
-    {
-        public string? Language { get; set; }
-        public string? LogFormat { get; set; }
+            try
+            {
+                var json = File.ReadAllText("app_config.json");
+                var config = JsonSerializer.Deserialize<ConfigModel>(json);
+                return config?.BusinessSoftware;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        #endregion
+
+        // Classe interne pour désérialisation
+        public class ConfigModel
+        {
+            public string? Language { get; set; }
+            public string? LogFormat { get; set; }
+            public string? BusinessSoftware { get; set; }
+        }
     }
 }

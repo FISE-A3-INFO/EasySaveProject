@@ -19,8 +19,8 @@ namespace EasySave.Core.Services.Backup
             }
 
             work.Status = EasySave.Core.Enums.SaveState.Active;
+            System.Threading.Thread.Sleep(3000);
             
-
             var files = Directory.GetFiles(work.SourcePath, "*", SearchOption.AllDirectories);
             int total = files.Length;
             long size = 0;
@@ -41,13 +41,22 @@ namespace EasySave.Core.Services.Backup
             {
                 while (work.PauseRequested)
                     System.Threading.Thread.Sleep(200);
-                
+
+                while (PauseService.GlobalPauseRequested)
+                {
+                    work.Status = SaveState.Paused;
+                    System.Threading.Thread.Sleep(300);
+                }
+                if (work.Status == SaveState.Paused)
+                    work.Status = SaveState.Active;
+
                 var rel = Path.GetRelativePath(work.SourcePath, src);
                 var dst = Path.Combine(work.TargetPath, rel);
                 Directory.CreateDirectory(Path.GetDirectoryName(dst)!);
 
                 var sw = Stopwatch.StartNew();
-                try { File.Copy(src, dst, true); sw.Stop(); }
+                try
+                { File.Copy(src, dst, true); sw.Stop(); }
                 catch
                 {
                     sw.Stop();
@@ -79,7 +88,7 @@ namespace EasySave.Core.Services.Backup
                 state.CurrentFileSource = src;
                 state.CurrentFileTarget = dst;
                 state.LastActionTime = DateTime.Now;
-                StateService.Instance.WriteState(new List<SaveStateEntry> { state });
+                StateService.Instance.WriteState(new System.Collections.Generic.List<SaveStateEntry> { state });
             }
 
             work.Status = EasySave.Core.Enums.SaveState.Completed;
