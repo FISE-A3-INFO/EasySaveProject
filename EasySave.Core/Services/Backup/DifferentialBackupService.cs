@@ -20,6 +20,7 @@ namespace EasySave.Core.Services.Backup
             }
 
             work.Status = EasySave.Core.Enums.SaveState.Active;
+            System.Threading.Thread.Sleep(1500); // 1,5 seconde de pause entre chaque fichie
 
             var allFiles = Directory.GetFiles(work.SourcePath, "*", SearchOption.AllDirectories);
             var toCopy = new List<string>();
@@ -53,6 +54,9 @@ namespace EasySave.Core.Services.Backup
             int done = 0;
             foreach (var src in toCopy)
             {
+                while (work.PauseRequested)
+                    System.Threading.Thread.Sleep(200);
+
                 var rel = Path.GetRelativePath(work.SourcePath, src);
                 var dst = Path.Combine(work.TargetPath, rel);
                 Directory.CreateDirectory(Path.GetDirectoryName(dst)!);

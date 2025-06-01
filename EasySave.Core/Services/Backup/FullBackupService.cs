@@ -19,6 +19,7 @@ namespace EasySave.Core.Services.Backup
             }
 
             work.Status = EasySave.Core.Enums.SaveState.Active;
+            
 
             var files = Directory.GetFiles(work.SourcePath, "*", SearchOption.AllDirectories);
             int total = files.Length;
@@ -38,6 +39,9 @@ namespace EasySave.Core.Services.Backup
             int done = 0;
             foreach (var src in files)
             {
+                while (work.PauseRequested)
+                    System.Threading.Thread.Sleep(200);
+                
                 var rel = Path.GetRelativePath(work.SourcePath, src);
                 var dst = Path.Combine(work.TargetPath, rel);
                 Directory.CreateDirectory(Path.GetDirectoryName(dst)!);

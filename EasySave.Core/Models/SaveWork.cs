@@ -28,5 +28,19 @@ namespace EasySave.Core.Models
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propName)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+        private bool _pauseRequested;
+        public bool PauseRequested
+        {
+            get => _pauseRequested;
+            set
+            {
+                if (_pauseRequested != value)
+                {
+                    _pauseRequested = value;
+                    OnPropertyChanged(nameof(PauseRequested));
+                }
+            }
+        }
+
     }
 }
