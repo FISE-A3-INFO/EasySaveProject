@@ -1,1 +1,6 @@
-{"Language":"fr","LogFormat":"xml","BusinessSoftware":"notepad.exe"}
+{
+  "Language": "fr",
+  "LogFormat": "json",
+  "BusinessSoftware": "notepad.exe",
+  "PrioritaryExtensions": [".docx", ".xlsx", ".pdf"]
+}

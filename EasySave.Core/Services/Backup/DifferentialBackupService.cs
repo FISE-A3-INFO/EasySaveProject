@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 using EasySave.Core.Models;
 using EasySave.Core.Enums;
 using EasySave.Core.Services;
@@ -52,7 +53,12 @@ namespace EasySave.Core.Services.Backup
             };
 
             int done = 0;
-            foreach (var src in toCopy)
+
+            // ==== PRIORITE ====
+            var prioritaryFiles = toCopy.Where(f => ConfigService.PrioritaryExtensions.Contains(Path.GetExtension(f).ToLower())).ToList();
+            var nonPrioritaryFiles = toCopy.Where(f => !ConfigService.PrioritaryExtensions.Contains(Path.GetExtension(f).ToLower())).ToList();
+
+            foreach (var src in prioritaryFiles.Concat(nonPrioritaryFiles))
             {
                 while (work.PauseRequested)
                     System.Threading.Thread.Sleep(200);

@@ -5,6 +5,7 @@ using EasySave.Core.Models;
 using EasySave.Core.Enums;
 using EasySave.Core.Services;
 using EasySave.Logger;
+using System.Linq;
 
 namespace EasySave.Core.Services.Backup
 {
@@ -20,7 +21,7 @@ namespace EasySave.Core.Services.Backup
 
             work.Status = EasySave.Core.Enums.SaveState.Active;
             System.Threading.Thread.Sleep(3000);
-            
+
             var files = Directory.GetFiles(work.SourcePath, "*", SearchOption.AllDirectories);
             int total = files.Length;
             long size = 0;
@@ -37,7 +38,12 @@ namespace EasySave.Core.Services.Backup
             };
 
             int done = 0;
-            foreach (var src in files)
+
+            // ==== PRIORITE ====
+            var prioritaryFiles = files.Where(f => ConfigService.PrioritaryExtensions.Contains(Path.GetExtension(f).ToLower())).ToList();
+            var nonPrioritaryFiles = files.Where(f => !ConfigService.PrioritaryExtensions.Contains(Path.GetExtension(f).ToLower())).ToList();
+
+            foreach (var src in prioritaryFiles.Concat(nonPrioritaryFiles))
             {
                 while (work.PauseRequested)
                     System.Threading.Thread.Sleep(200);

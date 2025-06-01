@@ -41,6 +41,9 @@ namespace EasySave.Core.Models
                 }
             }
         }
+        public List<string> FilesToCopy { get; set; } = new List<string>();
+        public HashSet<string> ProcessedFiles { get; set; } = new HashSet<string>();
+
 
     }
 }
